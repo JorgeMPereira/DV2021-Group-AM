@@ -4,5 +4,4 @@ dash_html_components
 plotly
 pandas
 numpy
-calendar
 base64
