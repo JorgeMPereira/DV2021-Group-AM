@@ -4,4 +4,3 @@ dash_html_components
 plotly
 pandas
 numpy
-base64
