@@ -65,7 +65,7 @@ dictMapperFilter = {1: '2020-01',
                     14: '2021-02',
                     15: '2021-03'}
 
-#path = 'C:/Users/Jorge/Documents/Mestrado/2Semestre/Data Visualization/Projeto/'
+#path = 'C:/Users/Jorge/Documents/Mestrado/2Semestre/Data Visualization/Projeto/DV2021-Group-AM/'
 path = ''
 
 mapPicklistOptions = ['new_cases', 'new_cases_per_million']
@@ -197,7 +197,7 @@ fig2 = go.Figure(data = data2, layout = layout2)
 data3 = dict(type = 'bar', x = gdpDf['Continent'], y = gdpDf['GDP(US$billion)'])
 
 layout3 = dict(title = dict(text = 'GDP per Continent'),
-               yaxis=dict(title='GDP (US$)', autorange = True, mirror = False),
+               yaxis=dict(title='GDP (US$)'),
                xaxis=dict(title='Continents'),
                paper_bgcolor = 'rgba(0,0,0,0)',
                plot_bgcolor = 'rgba(0,0,0,0)',
