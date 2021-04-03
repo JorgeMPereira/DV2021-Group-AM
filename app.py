@@ -144,22 +144,19 @@ countryInd.loc[countryInd[countryInd['new_cases'] < 0].index, 'new_cases'] = 0
 #=======================================================================================================================================
 
 data1  =  dict(type = 'choropleth',
-              locations = dfWorldData['location'],  #There are three ways to 'merge' your data with the data pre embedded in the map
+              locations = dfWorldData['location'],
               locationmode = 'country names',
               z = round(dfWorldData['sum'], 3),
               colorscale = 'emrld',
               colorbar = dict(title = 'Covid cases', bgcolor  =  'white'),
-              #hovertemplate = 'z:%{}' #'dfWorldData['sum']'
              )
 
 layout1  =  dict(geo = dict(scope = 'world',
                             projection = dict(type = 'natural earth'),
-                            #showland = True,   # default  =  True
                             landcolor = 'black',
                             lakecolor = 'white',
                             showocean = True,
                             oceancolor = 'LightCyan',
-                            #bgcolor = 'rgb(173,195,193)',
                             ),
                          
                 title = dict(text = 'Impact of Covid-19 in the World', x = .48, y = 0.91),
@@ -200,7 +197,7 @@ fig2 = go.Figure(data = data2, layout = layout2)
 data3 = dict(type = 'bar', x = gdpDf['Continent'], y = gdpDf['GDP(US$billion)'])
 
 layout3 = dict(title = dict(text = 'GDP per Continent'),
-               yaxis=dict(title='GDP (US$)'),
+               yaxis=dict(title='GDP (US$)', autorange = True, mirror = False),
                xaxis=dict(title='Continents'),
                paper_bgcolor = 'rgba(0,0,0,0)',
                plot_bgcolor = 'rgba(0,0,0,0)',
@@ -236,7 +233,7 @@ fig4 = go.Figure(data = data4, layout = layout4)
 #====================================================================
 
 data5  =  dict(type = 'choropleth',
-              locations = dfCountryChoosen['location'],  #There are three ways to 'merge' your data with the data pre embedded in the map
+              locations = dfCountryChoosen['location'],
               locationmode = 'country names',
               z = dfCountryChoosen['pick'],
               colorscale = 'emrld'
@@ -244,11 +241,9 @@ data5  =  dict(type = 'choropleth',
 
 layout5  =  dict(geo = dict(scope = 'europe',
                             projection = dict(type = 'natural earth'),
-                            #showland = True,   # default  =  True
                             landcolor = 'black',
                             lakecolor = 'white',
                             showocean = False,
-                            #bgcolor = 'rgb(173,195,193)',
                             visible= False,
                             ),
                 title = dict(text = 'Geolocation', x = .15, y = 0.91),         
@@ -289,7 +284,6 @@ app.layout = html.Div(children=[
     
     html.Div([
             html.Div([
-                    #html.Div('Covid-19       The time with us', style = {'font-size':'70px', 'text-align': 'center'}),
                     html.Img(src='data:image/png;base64,{}'.format(img.decode())),
                 
                      html.Div(
