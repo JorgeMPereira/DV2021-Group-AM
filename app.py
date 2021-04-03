@@ -395,7 +395,7 @@ app.layout = html.Div(children=[
                          style  =  {'margin-top': '12%'}),
         
         
-            ], style = {'width':'40%', 'border-radius': '10px', 'background-color': 'white', 'padding': '20px', 'box-shadow': '5px 5px 10px #888888'}),
+            ], style = {'width':'25%', 'border-radius': '10px', 'background-color': 'white', 'padding': '20px', 'box-shadow': '5px 5px 10px #888888'}),
         
         html.Div([        
         html.Div([
