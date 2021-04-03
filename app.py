@@ -65,8 +65,8 @@ dictMapperFilter = {1: '2020-01',
                     14: '2021-02',
                     15: '2021-03'}
 
-path = 'C:/Users/Jorge/Documents/Mestrado/2Semestre/Data Visualization/Projeto/DV2021-Group-AM/'
-#path = ''
+#path = 'C:/Users/Jorge/Documents/Mestrado/2Semestre/Data Visualization/Projeto/DV2021-Group-AM/'
+path = ''
 
 mapPicklistOptions = ['new_cases', 'new_cases_per_million']
 mapPicklistOptions = [dict(label=gas.replace('_', ' '), value=gas) for gas in mapPicklistOptions]
