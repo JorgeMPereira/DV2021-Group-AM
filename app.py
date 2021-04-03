@@ -65,8 +65,8 @@ dictMapperFilter = {1: '2020-01',
                     14: '2021-02',
                     15: '2021-03'}
 
-path = 'C:/Users/Jorge/Documents/Mestrado/2Semestre/Data Visualization/Projeto/'
-#path = ''
+#path = 'C:/Users/Jorge/Documents/Mestrado/2Semestre/Data Visualization/Projeto/'
+path = ''
 
 mapPicklistOptions = ['new_cases', 'new_cases_per_million']
 mapPicklistOptions = [dict(label=gas.replace('_', ' '), value=gas) for gas in mapPicklistOptions]
@@ -414,8 +414,7 @@ app.layout = html.Div(children=[
             ], style = {'vertical-align':'top', 'margin-left': '2%'}),
         
         ], style = {'background-color': 'white', 'box-shadow': '5px 5px 10px #888888','border-radius': '10px', 'display': 'inline-flex', 'margin-left': '2%', 'padding-right': '20px'})
-        #html.Div([], style = {'height':'290px', 'width': '85px', 'background-color' : 'white', 'top':'211%', 'position': 'absolute', 'left':'55%'}),
-        
+
         ], style  =  {'padding':'30px 5% 30px 5%', 'display': 'flex'}),
 
 
