@@ -65,8 +65,8 @@ dictMapperFilter = {1: '2020-01',
                     14: '2021-02',
                     15: '2021-03'}
 
-#path = 'C:/Users/Jorge/Documents/Mestrado/2Semestre/Data Visualization/Projeto/'
-path = ''
+path = 'C:/Users/Jorge/Documents/Mestrado/2Semestre/Data Visualization/Projeto/'
+#path = ''
 
 mapPicklistOptions = ['new_cases', 'new_cases_per_million']
 mapPicklistOptions = [dict(label=gas.replace('_', ' '), value=gas) for gas in mapPicklistOptions]
@@ -251,7 +251,7 @@ layout5  =  dict(geo = dict(scope = 'europe',
                             #bgcolor = 'rgb(173,195,193)',
                             visible= False,
                             ),
-                         
+                title = dict(text = 'Geolocation', x = .15, y = 0.91),         
                 height = 450,
                 paper_bgcolor = 'rgba(0,0,0,0)',
                 plot_bgcolor = 'rgba(0,0,0,0)'
@@ -282,6 +282,8 @@ figInd = go.Figure(data=dataInd, layout=layoutInd)
 app = dash.Dash(__name__)
 
 server = app.server
+
+app.title = 'A Shot of Data | DV Group AM'
 
 app.layout = html.Div(children=[
     
@@ -382,7 +384,7 @@ app.layout = html.Div(children=[
                 html.Div(
                         dcc.Dropdown(id = 'picks1',
                                      options = countryList,
-                        ), style = {'display': 'inline-block', 'width':'50%', 'margin-left': '5%', 'vertical-align': 'top', 'color' : 'black', 'box-shadow': '5px 5px 10px #888888', 'float': 'right'})
+                        ), style = {'display': 'inline-block', 'width':'48%', 'margin-left': '4%', 'vertical-align': 'top', 'color' : 'black', 'box-shadow': '5px 5px 10px #888888', 'float': 'right'})
                 ]),
             
             
@@ -393,24 +395,26 @@ app.layout = html.Div(children=[
                          style  =  {'margin-top': '12%'}),
         
         
-            ], style = {'width':'28%', 'border-radius': '10px', 'background-color': 'white', 'padding': '20px', 'box-shadow': '5px 5px 10px #888888'}),
+            ], style = {'width':'40%', 'border-radius': '10px', 'background-color': 'white', 'padding': '20px', 'box-shadow': '5px 5px 10px #888888'}),
         
+        html.Div([        
         html.Div([
             html.Div(
                 dcc.Graph(
                  id = 'worldGraph11',
                  figure = fig5)
-            , style = {'width':'100%'})
-            ], style = {'display': 'inline-block', 'width':'29%', 'border-radius': '10px', 'background-color': 'white', 'margin-left': '2%', 'box-shadow': '5px 5px 10px #888888'}),
+            , style = {'width':'70%'})
+            ], style = {'padding-right': '2%'}),
         
         html.Div([
                 dcc.Graph(
                 			id = 'continentCasesGraph1',
                 			figure = figInd
             		)
-            ], style = {'vertical-align':'top', 'display': 'inline-block', 'width':'37%', 'border-radius': '10px', 'background-color': 'white', 'margin-left': '2%', 'box-shadow': '5px 5px 10px #888888'}),
+            ], style = {'vertical-align':'top', 'margin-left': '2%'}),
         
-        html.Div([], style = {'height':'290px', 'width': '85px', 'background-color' : 'white', 'top':'211%', 'position': 'absolute', 'left':'55%'}),
+        ], style = {'background-color': 'white', 'box-shadow': '5px 5px 10px #888888','border-radius': '10px', 'display': 'inline-flex', 'margin-left': '2%', 'padding-right': '20px'})
+        #html.Div([], style = {'height':'290px', 'width': '85px', 'background-color' : 'white', 'top':'211%', 'position': 'absolute', 'left':'55%'}),
         
         ], style  =  {'padding':'30px 5% 30px 5%', 'display': 'flex'}),
 
@@ -479,7 +483,7 @@ def updateCountryChoosen(picklistOption):
                             showocean = False,
                             visible= False
                             ),
-                         
+                title = dict(text = 'Geolocation', x = .15, y = 0.91),         
                 height = 450,
                 paper_bgcolor = 'rgba(0,0,0,0)',
                 plot_bgcolor = 'rgba(0,0,0,0)'
