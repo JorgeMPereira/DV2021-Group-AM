@@ -350,7 +350,7 @@ app.layout = html.Div(children=[
                         html.Div('For the surprise of humankind, vaccines were developed throughout the year of 2020. It started to be tested and consequently approved by EMA, FDA etc.. This new hope in bottles led countries bidding and buying a lot of batches to start vaccination in the respective countries. It is visible that some continents were more affected than others and the rush to vaccinate on those began. One scenario raised by experts was that the continents with more economical power would for sure buy and vaccinate more. Would these continents be incorruptible enough to buy the right amount for necessity or just to impose their economical power? We can visualize that Asia, North America and Europe are the continents with higher number of vaccinations. It is possible to observe that these specific continents are the most affected by the pandemic, therefore is safe to say that all the money invested would be for the benefit of the population in these countries and continents.',
                                 style  =  {'padding-top':'20px'}),
                         
-                        ],style = {'border-radius': '10px', 'background-color': 'white', 'padding': '20px', 'box-shadow': '5px 5px 10px #888888', 'height': '410px', 'width':'30%', 'vertical-align': 'top', 'position':'relative', 'flex-grow': '1'}),
+                        ],style = {'border-radius': '10px', 'background-color': 'white', 'padding': '20px', 'box-shadow': '5px 5px 10px #888888', 'width':'30%', 'vertical-align': 'top', 'position':'relative', 'flex-grow': '1'}),
                     
 
         
