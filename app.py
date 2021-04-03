@@ -395,7 +395,7 @@ app.layout = html.Div(children=[
                          style  =  {'margin-top': '12%'}),
         
         
-            ], style = {'width':'25%', 'border-radius': '10px', 'background-color': 'white', 'padding': '20px', 'box-shadow': '5px 5px 10px #888888'}),
+            ], style = {'width':'36%', 'border-radius': '10px', 'background-color': 'white', 'padding': '20px', 'box-shadow': '5px 5px 10px #888888'}),
         
         html.Div([        
         html.Div([
@@ -403,17 +403,16 @@ app.layout = html.Div(children=[
                 dcc.Graph(
                  id = 'worldGraph11',
                  figure = fig5)
-            , style = {'width':'70%'})
-            ], style = {'padding-right': '2%'}),
+            , style = {'width':'100%'})
+            ], style = {'padding-right': '2%', 'display': 'inline-block', 'width': '48%'}),
         
         html.Div([
                 dcc.Graph(
                 			id = 'continentCasesGraph1',
                 			figure = figInd
             		)
-            ], style = {'vertical-align':'top', 'margin-left': '2%'}),
-        
-        ], style = {'background-color': 'white', 'box-shadow': '5px 5px 10px #888888','border-radius': '10px', 'display': 'inline-flex', 'margin-left': '2%', 'padding-right': '20px'})
+            ], style = {'vertical-align':'top', 'margin-left': '2%', 'display': 'inline-block', 'width': '48%'}),        
+        ], style = {'background-color': 'white', 'box-shadow': '5px 5px 10px #888888','border-radius': '10px', 'margin-left': '2%', 'padding-right': '20px', 'width': '100%'})
 
         ], style  =  {'padding':'30px 5% 30px 5%', 'display': 'flex'}),
 
