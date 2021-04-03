@@ -197,10 +197,10 @@ fig2 = go.Figure(data = data2, layout = layout2)
 
 #====================================================================
 
-data3 = dict(type = 'bar', x = gdpDf['Continent'], y = gdpDf['GDP(US$billion)'])
+data3 = dict(type = 'bar', x = gdpDf['Continent'], y = [str(value).replace(',','') for value in gdpDf['GDP(US$billion)']])
 
 layout3 = dict(title = dict(text = 'GDP per Continent'),
-               yaxis=dict(title='GDP (US$)', autorange = 'reversed'),
+               yaxis=dict(title='GDP (US$)'),
                xaxis=dict(title='Continents'),
                paper_bgcolor = 'rgba(0,0,0,0)',
                plot_bgcolor = 'rgba(0,0,0,0)',
